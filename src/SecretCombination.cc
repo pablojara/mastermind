@@ -6,7 +6,7 @@ SecretCombination::SecretCombination()
     combination = new char[4];
     for(int i = 0; i < 4; i++)
     {
-        combination[i] = 'X';
+        combination[i] = 'R';
     }
 
 }
@@ -17,9 +17,16 @@ void SecretCombination::printSecretCombination()
 
     for(int i = 0; i < 4; i++)
     {
-        std::cout << combination[i];
+        std::cout << '*';
     }
 
     std::cout << std::endl;
 
 }
+
+char *SecretCombination::getCombination()
+{
+    return this->combination;
+}
+
+
