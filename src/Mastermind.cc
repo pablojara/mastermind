@@ -17,8 +17,5 @@ int main()
     Mastermind mastermind;
     mastermind.getSecretCombination().printSecretCombination();
 
-    std::cout << "END\n";
-
-
 }
 
