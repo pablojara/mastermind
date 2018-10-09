@@ -1,9 +1,11 @@
-class SecretCombination
+#include "Combination.h"
+
+class SecretCombination: public Combination
 {
 
     public:
         SecretCombination();
-        void printSecretCombination();
+        void printCombination();
         char *getCombination();
 
     private:

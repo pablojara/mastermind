@@ -19,7 +19,6 @@ ProposedCombination *Mastermind::getProposedCombinations()
 void Mastermind::play()
 {
     int current = 0;
-    secretCombination.printSecretCombination();
     do
     {
         this->proposedCombinations[current].readCombination();
@@ -35,7 +34,7 @@ void Mastermind::play()
     else
     {
         std::cout << "You loose.\n";
-        this->secretCombination.printSecretCombination();
+        this->secretCombination.printCombination();
     }
 }
 

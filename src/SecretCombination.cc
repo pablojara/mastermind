@@ -11,13 +11,13 @@ SecretCombination::SecretCombination()
 
 }
 
-void SecretCombination::printSecretCombination()
+void SecretCombination::printCombination()
 {
     std::cout << "Secret combination: ";
 
     for(int i = 0; i < 4; i++)
     {
-        std::cout << '*';
+        std::cout << this->combination[i];
     }
 
     std::cout << std::endl;
@@ -28,5 +28,3 @@ char *SecretCombination::getCombination()
 {
     return this->combination;
 }
-
-

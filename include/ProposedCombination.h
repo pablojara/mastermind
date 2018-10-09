@@ -1,7 +1,7 @@
 #include "Result.h"
 #include "SecretCombination.h"
 
-class ProposedCombination
+class ProposedCombination: public Combination
 {
     public:
         ProposedCombination(); 
