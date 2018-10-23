@@ -1,3 +1,5 @@
+#include "EnumColor.h"
+
 class Combination
 {
     public:

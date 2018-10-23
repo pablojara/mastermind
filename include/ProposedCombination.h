@@ -5,7 +5,7 @@ class ProposedCombination: public Combination
 {
     public:
         ProposedCombination(); 
-        char  *getCombination();
+        EnumColor  *getCombination();
         void readCombination();
         void calculateResult(SecretCombination secretCombination);
         void printCombination();
@@ -13,7 +13,7 @@ class ProposedCombination: public Combination
         bool checkWin();
 
     private:
-        char *combination;
+        EnumColor *combination;
         Result result;
 
 

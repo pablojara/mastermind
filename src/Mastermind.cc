@@ -24,7 +24,6 @@ void Mastermind::play()
         this->proposedCombinations[current].readCombination();
         this->proposedCombinations[current].calculateResult(secretCombination);
         this->printBoard(current);
-        //this->proposedCombinations[current].printResult();
         current ++;
     }
     while(!this->proposedCombinations[current-1].checkWin() && current < 10);

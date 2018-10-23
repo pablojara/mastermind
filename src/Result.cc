@@ -3,7 +3,7 @@
 Result::Result()
 {
     this->result = new int[4];
-    for(int i = 4; i < 4; i ++)
+    for(int i = 0; i < 4; i ++)
     {
         result[i] = 0;
     }

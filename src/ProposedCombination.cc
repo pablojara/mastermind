@@ -6,30 +6,31 @@ ProposedCombination::ProposedCombination()
 
 }
 
-char *ProposedCombination::getCombination()
+EnumColor *ProposedCombination::getCombination()
 {
     return this->combination;
 }
 
 void ProposedCombination::readCombination()
 {
-    this->combination = new char[4];
-
-    std::cout << "Enter the proposed combination (Allowed colores are \033[1;31mR\033[0m, \033[1;32mG\033[0m, \033[1;34mB\033[0m, \033[1;33mY\033[0m): ";
+    this->combination = new EnumColor[4];
+    char value;
+    std::cout << "Enter the proposed combination (Allowed colors are \033[1;31mR\033[0m, \033[1;32mG\033[0m, \033[1;34mB\033[0m, \033[1;33mY\033[0m): ";
 
     for(int i = 0; i < 4; i ++)
     {
-        std::cin >> this->combination[i];
+        std::cin >> value;
+        this->combination[i].setValue(value);
     }
 
 }
 
 void ProposedCombination::calculateResult(SecretCombination secretCombination)
 {
-    char *secretCombinationArray = secretCombination.getCombination();
+    EnumColor *secretCombinationArray = secretCombination.getCombination();
     for(int i = 0; i < 4; i++)
     {
-        if(this->combination[i] == secretCombinationArray[i])
+        if(this->combination[i].getValue() == secretCombinationArray[i].getValue())
         {
             this->result.setHit(i);
         }
@@ -41,7 +42,7 @@ void ProposedCombination::printCombination()
 {
     for(int i = 0; i < 4; i++)
     {   
-        switch(this->combination[i]) /* Print colored text in the console using ASCII code */
+        switch(this->combination[i].getValue()) /* Print colored text in the console using ASCII code */
         {
             case 'R':
                 std::cout <<  "\033[1;31mR  \033[0m";

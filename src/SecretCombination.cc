@@ -3,10 +3,10 @@
 
 SecretCombination::SecretCombination()
 {
-    combination = new char[4];
+    combination = new EnumColor[4];
     for(int i = 0; i < 4; i++)
     {
-        combination[i] = 'R';
+        combination[i].setValue('R');
     }
 
 }
@@ -17,14 +17,14 @@ void SecretCombination::printCombination()
 
     for(int i = 0; i < 4; i++)
     {
-        std::cout << this->combination[i];
+        std::cout << this->combination[i].getValue();
     }
 
     std::cout << std::endl;
 
 }
 
-char *SecretCombination::getCombination()
+EnumColor *SecretCombination::getCombination()
 {
     return this->combination;
 }

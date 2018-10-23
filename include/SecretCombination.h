@@ -6,10 +6,10 @@ class SecretCombination: public Combination
     public:
         SecretCombination();
         void printCombination();
-        char *getCombination();
+        EnumColor *getCombination();
 
     private:
-        char *combination;        
+        EnumColor *combination;        
 
 };
 
